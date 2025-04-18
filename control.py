@@ -72,14 +72,14 @@ def menu_go(stats, screen, game_menu, sc, gun, ines, bosses,last_bosses, bullets
         sh.started_game()
         time.sleep(1)
         stats.wave_life = True
-        stats.boss_hp += 10
+        stats.boss_hp += 12
         stats.last_boss_hp += 100
         last_bosses.empty()
         bosses.empty()
         ines.empty()
         bullets.empty()
         stats.run_game = 2
-        stats.guns_left += 1
+        stats.guns_left += 3
         stats.wave_ines = 0
         sc.image_wave()
         sc.show_wave()
@@ -106,14 +106,14 @@ def update_go(stats, screen,game_over,game_menu, sc, gun, ines, bosses,last_boss
         sh.restart_sound()
         time.sleep(1)
         stats.wave_life = True
-        stats.boss_hp += 10
-        stats.last_boss_hp += 100
+        stats.boss_hp += 12
+        stats.last_boss_hp += 120
         last_bosses.empty()
         bosses.empty()
         ines.empty()
         bullets.empty()
         stats.run_game = 2
-        stats.guns_left += 1
+        stats.guns_left += 3
         stats.wave_ines = 0
         sc.image_wave()
         sc.show_wave()
@@ -201,7 +201,7 @@ def update_bullets(screen,stats, sc,gun, ines, bosses, last_bosses, bullets):
     if len(ines) == 0 and stats.wave_life:
         stats.wave_ines += 1
         sc.image_wave()
-        if stats.wave_ines == 1 and stats.wave_life:
+        if stats.wave_ines == 11 and stats.wave_life:
             stats.wave_life = False
             if stats.boss_life == False and stats.wave_life == False:
                 ines.empty()
@@ -219,7 +219,7 @@ def update_bullets(screen,stats, sc,gun, ines, bosses, last_bosses, bullets):
                 sh.bosses_res()
                 time.sleep(2)
                 boss_start(stats, screen, bosses)
-        elif stats.wave_ines % 2 != 0 and stats.wave_ines != 1 and stats.wave_life:
+        elif stats.wave_ines % 2 != 0 and stats.wave_ines != 11 and stats.wave_life:
             ines.empty()
             bullets.empty()
             create_army(screen, ines)

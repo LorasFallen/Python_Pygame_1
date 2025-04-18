@@ -12,10 +12,10 @@ from game_over import Game_over
 from win import Win
 def sound_main():
     playlist = list()
-    playlist.append('sound/main_1.mp3')
+    playlist.append('sound/main_3.mp3')
     playlist.append('sound/main_2.mp3')
     playlist.append('sound/main_5.mp3')
-    playlist.append('sound/main_3.mp3')
+    playlist.append('sound/main_1.mp3')
     playlist.append('sound/main_4.mp3')
     pygame.mixer.music.load(playlist.pop())
     pygame.mixer.music.queue(playlist.pop())
