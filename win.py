@@ -16,6 +16,7 @@ class Win():
         self.wbatton_exit = self.font.render('Выход', True, self.text_color, (205, 92, 92))
         self.bwe_rect = self.wbatton_exit.get_rect(topleft=(500, 500))
         self.gratitude_label = self.font_gratitude.render('Спасибо большое, что ознакомился с игрой! Для меня это первый опыт, я много ошибался, но благодарю, что ты дошёл до конца', True, self.text_color)
+        self.fgratitude_label = self.font_gratitude.render( 'Так же благодарность Фадееву Даниле за терпение во время компиляции', True, self.text_color)
         self.game_win()
 
     def game_win(self):
@@ -24,3 +25,4 @@ class Win():
         self.screen.blit(self.wbatton_menu, self.bwm_rect)
         self.screen.blit(self.wbatton_exit, self.bwe_rect)
         self.screen.blit(self.gratitude_label, (10, 150))
+        self.screen.blit(self.fgratitude_label,(10,170))
