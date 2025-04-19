@@ -42,7 +42,6 @@ def events(stats, screen, gun, bullets):
                     bullets.add(new_bullet)
                     sh = Sounds()
                     sh.play_shot()
-                time.sleep(0.05)
             #Отжата кнопка
         elif event.type == pygame.KEYUP:
             #Вправо
