@@ -1,6 +1,5 @@
 from pygame.mixer import pre_init
 import control
-from PayGame.TranningGamePython.menu import Game_menu
 from gun import Gun
 import pygame
 from  pygame.sprite import Group
@@ -10,6 +9,7 @@ from location import Location
 from sounds import Sounds
 from game_over import Game_over
 from win import Win
+from menu import Game_menu
 def sound_main():
     playlist = list()
     playlist.append('sound/main_3.mp3')
