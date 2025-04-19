@@ -1,4 +1,3 @@
-from PIL.ImageChops import screen
 from pygame.sprite import Group
 import pygame.font
 from hp import HP
